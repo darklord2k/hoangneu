@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{/*reset css*/
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family:  Helvetica, sans-serif;
+            font-size: 16px;
+            background: #e2e2e2;
+        }
+        body{
+            background: white;
+            width: 1182px;
+           /* margin-left: auto;
+            margin-right: auto;*/
+            margin: 0 auto;
+            padding: 0px;
+        }
+        #newfeed{
+            height: 23px;
+            margin: 10 0px;
+            
+             }
+        #newfeed .running-text{
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 174, 255, 0.651);
+            float: left;
+            overflow: hidden;
+            
+        }
+        #newfeed .running-text ul{
+            width: 100%;
+            height: 100%;
+            animation: runningtext linear 15s infinite;
+            position: relative;
+            line-height: 26px;
+            
+           
+        }
+        #newfeed .running-text ul>li> a{
+            text-decoration: none;
+            color:red;
+        }
+        #newfeed .running-text>ul:hover{
+            animation-play-state: paused;
+        }
+        #newfeed .running-text ul>li{
+            display: inline-block;
+            font-weight: bold;
+        }
+        @keyframes runningtext {
+            0%{left:100%}
+            100%{left:-1000px}
+        }
+        #banner{
+            height: 200px;
+        }
+        #banner .large-banner{
+            height: 100%;
+            width: 100%;
+            float: left;
+
+        }
+        #banner .large-banner img{
+            height: 100%;
+            width: 100%;
+        }
+        #main-menu
+        {
+            height: 47px;
+            background:rgba(0, 174, 255, 0.651);
+        }
+        #main-menu>ul{
+            list-style-type: none;
+            height: 100%;
+        }
+        #main-menu>ul>li{
+            float: left;
+            height: 100%;
+            line-height: 47px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color:white;
+            padding: 0 30px;
+            font-size: 0.95rem;
+            position: relative;
+           
+
+        }
+        #main-menu>ul>li:hover{
+            background: red;
+        }
+        #main-menu>ul>li:hover>a{
+           background: red;
+        }
+        #main-menu>ul>li>a{
+            color: white;
+            text-decoration: none;
+        }
+        #main-menu>ul>li>ul{
+            list-style-type: none;
+           
+            width: 153px;
+            background: rgba(0, 174, 255, 0.651);   
+            position: absolute;
+            left:0;
+            padding: 10px 0;
+            display: none;
+            z-index:1; 
+        }
+        #main-menu>ul>li:hover>ul{
+            display: block;
+        }
+        #main-menu>ul>li>ul>li{
+           height: 35px;
+           line-height: 35px;
+           text-overflow: ellipsis;
+           padding: 0 10px;
+            position: relative;
+        }
+        #main-menu>ul>li>ul>li:hover{
+            
+            background: red;
+            animation:slide 1.5s;
+        }
+        #main-menu>ul>li>ul>li:hover>a{
+            color: white;
+        }
+        #main-menu>ul>li>ul>li>a{
+            color: white;
+            text-decoration: none;
+            
+        }
+        @keyframes slide {
+                 0%{left: 10px;}
+                20%{left: -8px}
+                40%{left: 6px;}
+                60%{left: -4px;}
+                80%{left: 2px;}
+                100%{left: 0px;}
+         }
+
+         #main-content{
+             height: 1250px;}
+
+        #main-content .content1{
+             height: 450px;
+            
+             
+         }
+         #main-content .content1 .left-content {
+                height: 100%;
+                width: 430px;
+                background: rgb(255, 255, 255);
+                float: left;
+         }
+         #main-content .content1 .left-content div{
+             height: 100%;
+             padding: 100px 120px 10px 150px;
+             float: left;
+             
+            
+         }
+         #main-content .content1 .right-content {
+                height: 100%;
+                width: 625px;
+                background:white;
+                float: left;
+                padding-left: 200px;
+         }
+         #main-content .content1 .right-content p{
+             font-weight: bold;
+             font-size: 2rem;
+             color:rgba(0, 68, 255, 0.651);
+             
+             margin-top: 22px;
+             margin-left: -230px;
+             text-transform: uppercase;
+         }
+         #main-content .content1 .right-content div{
+             width: 100%;
+            
+             margin-left: 30px;
+         }
+         #main-content .content1 .right-content div>div{
+             margin-left: 1px;
+             margin-top: 44px;
+             margin-bottom: -21px;
+         }
+         #main-content .content1 .right-content div>div>p{
+             color: red;
+         }
+         #main-content .content1 .right-content div p{
+             font-weight: normal;
+             text-transform: none;
+             font-size: 1.1rem;
+             color: black;
+         }
+         #main-content .content2{
+             height: 400px;
+             background: white;
+         }
+         #main-content .content2 .left-content {
+                height: 100%;
+                width: 430px;
+              
+                float: left;
+               
+         }
+         #main-content .content2 .left-content div{
+             height: 100%;
+             padding: 60px 120px 10px 150px;
+             float: left;
+         }
+         #main-content .content2 .right-content {
+                height: 100%;
+                width: 625px;
+                float: left;
+                  
+         }
+         #main-content .content2 .right-content div{
+             width: 100%;
+            margin-top: 60px;
+             
+            }
+         #main-content .content2 .right-content div>div>p{
+             color: red;
+         }
+         #main-content .content2 .right-content div p{
+             font-weight: normal;
+             text-transform: none;
+             font-size: 1.1rem;
+             color: black;
+         }
+         #main-content .content3{
+             height: 400px;
+             width: 100%;
+             background: white;
+         }
+         #main-content .content3 .left-content{
+            height: 100%;
+             width: 430px;
+                
+                float: left;
+         }
+         #main-content .content3 .left-content div{
+             height: 100%;
+             padding: 60px 120px 10px 150px;
+             
+         }
+         #main-content .content3 .right-content{
+            height: 100%;
+            width: 625px;
+            float: left;
+         }
+        #main-content .content3 .right-content div{
+            width: 100%;
+            margin-top: 60px;
+         }
+         #main-content .content3 .right-content div>div>p{
+             color: red;
+         }
+         #main-content .content3 .right-content div p{
+             font-weight: normal;
+             text-transform: none;
+             font-size: 1.1rem;
+             color: black;
+         }
+         #footer{
+             height: 200px;
+             background: rgba(0, 174, 255, 0.651); 
+         }
+         #footer .left-footer{
+             height: 100%;
+             width: 33%;
+             float: left;
+         }
+         #footer .left-footer div{
+             padding:30px 29px 29px ;}
+        #footer .left-footer div>p{
+            
+            color: white;
+        }
+        #footer .center-footer{
+            height: 100%;
+            width: 33%;
+            float: left;
+        }
+        #footer  .center-footer div{
+            padding:30px 29px 29px ;}
+         #footer  .center-footer div>p{
+             color: white;
+             margin-left: -10px;
+         }  
+         #footer  .center-footer div>ol{
+             margin-top: 10px;
+         }
+         #footer  .center-footer div>ol>li{
+             color: white;
+             list-style-type: none;
+
+         }
+         
+         #footer .right-footer{
+             height: 100%;
+             width: 34%;
+             /*background: green;*/
+             float: left;
+         }
+         #footer  .right-footer div{
+            padding:30px 29px 29px;
+        }
+        
+        #footer .right-footer div>p{
+            color: white;
+            margin-left: -10px;
+        }
+        #footer  .right-footer div>ol{
+             margin-top: 10px;
+        }
+        #footer  .right-footer div>ol>li{
+             color: white;
+             list-style-type: none;
+        }
+         }
+    </style>
+</head>
+<body>
+    <div id="newfeed">
+        <div class="running-text">
+            <ul>
+                <li><a href="">Với doanh thu 331,6 triệu USD trên toàn cầu, Your Name chính thức trở thành bộ phim anime đến từ Nhật Bản có doanh thu cao nhất mọi thời đại.</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <div class="large-banner">
+            <img src="yourname3.png" alt="">
+        </div>
+    </div>
+    <div id="main-menu">
+        <ul>
+            <li><a href="TrầnMinhHoàng_11181942.html">HOME</a></li>
+            <li>ABOUT
+            <ul>
+                <li><a href="">CHACRACTERS</a></li>
+                <li><a href="">LIVE ACTION</a></li>
+                <li><a href="">HISTORY</a></li>
+            </ul>
+        </li>
+            <li>NEWS
+            <ul>
+                <li><a href="">NEWS</a></li>
+                <li><a href="">EVENT</a></li>
+                <li><a href="">FANDOM</a></li>
+            </ul>
+        </li>
+            <li>TRAILER</li>
+            <li>SUPPORT
+            <ul>
+                <li><a href="">TICKET</a></li>
+                <li><a href="">ACCOUNT</a></li>
+            </ul> 
+        </li>
+            <li>FORUM</li>
+        </ul>
+    </div>
+    <div id="main-content">
+        <div class="content1">
+            <div class="left-content">
+               <div> <img src="taki.png" alt=""></div>
+            </div>
+            <div class="right-content">
+                <p>CÁC NHÂN VẬT CHÍNH</p>
+                <div>
+                   <div><p>TACHIBANA TAKI</p></div>
+                    <p>Tachibana Taki là nam nhân vật chính của Your name. Anh là một học sinh trung học 17 tuổi sống một lối sống bận rộn khi sắp xếp công việc bán thời gian của mình tại một nhà hàng Ý, dành thời gian vui vẻ với bạn bè và hy vọng vào một tương lai trong ngành kiến ​​trúc. Lối sống của anh thay đổi khi anh bắt đầu hoán đổi thân xác với một nữ sinh trung học tên Mitsuha Miyamizu trong giấc mơ của mình, người mong muốn được sống như một chàng trai đẹp trai ở Tokyo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="content2">
+            <hr size="5px"
+            color="blue"
+            width="100%" >
+            <div class="left-content">
+                <div> <img src="mitsuha.png" alt=""></div>
+             </div>
+             <div class="right-content">
+                 <div>
+                    <div><p>MIYAMIZU MITSUHA</p></div>
+                    <p>Miyamizu Mitsuha là nữ nhân vật chính của Your name. Cô là một học sinh trung học 17 tuổi sống ở một thị trấn nông thôn nhỏ tên là Itomori , và là một thành viên của gia đình Miyamizu, nơi cô phục vụ như một nữ tư tế trong ngôi đền của gia đình mình. Tuy nhiên, Mitsuha cảm thấy không hài lòng với cuộc sống ở thị trấn nhỏ của mình và do mối quan hệ căng thẳng mà cô có với người cha nghiêm khắc của mình và những lời chỉ trích cô nhận được khi biểu diễn như một thiếu nữ trong đền thờ, cô muốn sống như một chàng trai đẹp trai ở Tokyo. Mong ước của cô cuối cùng đã được thực hiện một phần khi cô bắt đầu hoán đổi thân xác với một học sinh trung học tên là Taki Tachibana trong giấc mơ của mình.</p>
+                 </div>
+             </div>
+        </div>
+        <div class="content3">
+            <hr color="blue"
+            width="100%"
+            size="5px">
+            <div class="left-content">
+                <div> <img src="miki.png" alt=""></div>
+             </div>
+             <div class="right-content">
+                 <div>
+                    <div><p>OKUDERA MIKI</p></div>
+                    <p>Okudera Miki, thường được gọi là "Okudera-senpai", là một nhân vật trong Your name. Cô ấy là một trong những đồng nghiệp của Taki Tachibana làm việc tại nhà hàng Ý, và họ đã phải lòng nhau trong phần đầu tiên của bộ phim.</p>
+                 </div>
+             </div>
+        </div>
+    </div>
+      
+
+<div id="footer">
+    <div class="left-footer">
+        <div><p>YOUR NAME</p>
+        <p>@Được thực hiện bởi Hoàng Trần</p>
+        <p>Tin học kinh tế 60</p>
+    </div>
+    </div>
+    <div class="center-footer">
+        <div>
+            <p>CHĂM SÓC KHÁCH HÀNG</p>
+            <ol>
+                <li>Trung tâm trợ giúp</li>
+                <li>Điều khoản dịch vụ</li>
+                <li>Chính sách hỗ trợ</li>
+                <li>Quảng cáo</li>
+                <li>Thanh toán</li>
+              
+                
+            </ol>
+        </div>
+
+    </div>
+    <div class="right-footer">
+        <div>
+            <p>LIÊN HỆ</p>
+            <ol>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Zalo</li>
+                <li>Hotline: 0353226889</li>
+            </ol>
+        </div>
+    </div>
+</div>
+</body>
+</html>
